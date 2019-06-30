@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', fubction(req, res){
+app.get('/', function(req, res){
     res.send("Answering to the call!!");
 })
 
