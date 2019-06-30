@@ -1,4 +1,5 @@
 const express = require('express');
+const debug = require('debug')('app');
 const chalk = require('chalk');
 
 const app = express();
@@ -8,5 +9,5 @@ app.get('/', function(req, res){
 })
 
 app.listen(3000, function(){
-    console.log(`listening to port ${chalk.green(3000)}`);
+    debug(`listening to port ${chalk.green(3000)}`);
 })
