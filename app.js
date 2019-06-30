@@ -1,5 +1,6 @@
 const express = require('express');
 const debug = require('debug')('app');
+// set DEBUG=* & node app.js
 const chalk = require('chalk');
 
 const app = express();
