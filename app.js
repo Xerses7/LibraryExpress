@@ -6,7 +6,7 @@ const morgan = require('morgan');
 
 const app = express();
 
-app.use(morgan('combined'));
+app.use(morgan('combined')); // anche 'tiny'
 
 app.get('/', function(req, res){
     res.send("Answering to the call!!");
