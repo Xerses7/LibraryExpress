@@ -3,13 +3,16 @@ const debug = require('debug')('app');
 // set DEBUG=* & node app.js
 const chalk = require('chalk');
 const morgan = require('morgan');
+const path = require('path');
 
 const app = express();
 
 app.use(morgan('combined')); // anche 'tiny'
 
 app.get('/', function(req, res){
-    res.send("Answering to the call!!");
+    // __dirname = location dell'eseguibile attuale
+    // path.join per creare il percorso per il file
+    res.sendFile(path.join(__dirname, 'views/index.html'));
 })
 
 app.listen(3000, function(){
