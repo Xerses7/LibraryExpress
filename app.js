@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 
 app.use(morgan('combined')); // anche 'tiny'
-
+app.use(express.static(path.join(__dirname,'/public')))
 app.get('/', function(req, res){
     // __dirname = location dell'eseguibile attuale
     // path.join per creare il percorso per il file
